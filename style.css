@@ -48,6 +48,8 @@ nav{
   height: auto;
   width: auto;
   box-shadow: 0px 0px 10px #adabab;
+  z-index: 2000;
+  background: transparent;
 }
 
 nav ul{
@@ -72,7 +74,7 @@ color: #fff;
 border-radius: 10px;
 }
 
-input{
+ .input1{
   visibility: hidden;
 }
 
@@ -85,20 +87,22 @@ label{
 
 .intro{
   display: flex;
-  height: 100vh;
+  min-height: 100dvh;
   width: 100%;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 0;
   margin-top:0;
+  /* overflow: hidden; */
 }
 
 .intro img{
-  margin-top: 50px;
+  margin-top: 0px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  z-index: 0;
 }
 
 .intro::before{
@@ -108,8 +112,8 @@ label{
   left:0;
   width: 100%;
   height: 100%;
-  margin-top: 25px;
   background-color: rgba(18, 18, 18, 0.5);
+  z-index: 1;
 }
 
 h2{
@@ -119,13 +123,14 @@ h2{
 }
 
 .content{
-  position: absolute;
+  position: relative;
   color: #fff;
   text-align: center;
   padding: 20px;
   width:80%;
+  max-width: 1000px;
   height: 100%;
-  top: 150px;
+  z-index: 2;
 }
 
 .content p{
@@ -166,7 +171,7 @@ h3{
     text-align: center;
   color: #c69b26;
   margin-top: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 em{
@@ -194,19 +199,19 @@ hr{
 .about-images{
   display: grid;
   grid-template-columns: 2fr 2fr;
-  gap: 6px;
+  gap: 1px;
   justify-content: center;
   align-items: center;
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
+  height: 50%;
 }
 
 .about-images img{
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   border-radius: 20px;
-  padding: 10px 1px;
+  padding: 10px 10px;
 }
 
 .about-content{
@@ -232,9 +237,13 @@ hr{
   justify-content: center;
   align-items: center;
   padding: 30px;
-  width: 90%;
+  width: 100%;
   height: fit-content;
   text-align: center;
+}
+
+.our-story p{
+  max-width: 900px;
 }
 
 .mission{
@@ -270,7 +279,6 @@ hr{
   border-radius: 10px;
   margin-left: 15px;
   mix-blend-mode: multiply;
-  margin-bottom: 10px;
   padding-top: 0;
 }
 
@@ -283,8 +291,10 @@ hr{
   height: auto;
   width: 100%;
   position: relative;
-  top: -50px;
+  top: -10px;
   gap: 10px;
+  bottom: 0;
+  margin-bottom: 0;
 }
 
 .mission-vision-ruler{
@@ -300,11 +310,10 @@ hr{
   align-items: center;
   display: flex;
   width: 100%;
-  margin-top:120px;
 }
 
 .website-logo-img{
-  max-width: 200px;
+  max-width: 150px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -316,8 +325,8 @@ h4{
   font-size: 25px;
   color: #c69b26;
   text-align: center;
-  margin-top: 120px;
-  margin-bottom: 50px;
+  margin-top: 150px;
+  margin-bottom: 100px;
 }
 
 .why-choose-us{
@@ -436,7 +445,7 @@ i{
 
 h5{
   font-size: 25px;
-  color: #c69b26;
+  color: #2e7d32;
   text-align: center;
   margin-top: 150px;
   margin-bottom: 20px;
@@ -503,13 +512,137 @@ h5{
   border-radius: 10px;
   cursor: pointer;
   transition: 0.4s ease-in-out;
-
 }
 
 
+.contact-box{
+  margin-top: 0px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
 
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 
+.visitor-info{
+width: 80%;
+max-width: 900px;
+border-radius: 100%;
+justify-content: center;
+align-items: center;
+}
 
+textarea{
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+  transition: 0.1s ease-in-out;
+}
+
+textarea:focus{
+  border: 2px solid #c69b26;
+}
+
+::placeholder{
+  color: #827d7d;
+  font-size: 15px;
+}
+
+.visitor-info button{
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #c69b26;;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.visitor-info button:hover{
+opacity: 0.9;
+}
+
+/* FOOTER */
+.footer{
+  margin-top: 200px;
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content{
+  max-width: 1000px;
+display: flex;
+flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap:10px;
+}
+
+.footer-section-about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-section-services{
+  text-align: left;
+}
+
+.footer-section-about img{
+  border-radius: 50%;
+}
+
+.footer-section-links{
+  text-align: left;
+}
+
+.footer-section-links ul li{
+  list-style: none;
+  color: #333;
+  margin: 5px 0;
+}
+
+.footer-section-links ul li a{
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s ease-in-out;
+} 
+
+.links-contact{
+  display: flex;
+  gap:50px;
+}
+
+.footer-bottom{
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+.email{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.email i{
+  font-size: 18px;
+}
 
 
 
@@ -529,6 +662,16 @@ h5{
   input{
     visibility: hidden;
   }
+
+  .menu-bar{
+    width: 250px;
+    top: 100%;
+    right: 0;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    z-index: 1500;
+  } 
 
 .menu-bar ul{
     display: block;
@@ -554,7 +697,6 @@ h5{
   }
 
   #side {
-    position: sticky;
   color: #fff;
   background: #333;
     /* background: linear-gradient(to top, 
@@ -570,7 +712,7 @@ h5{
     color: #000000;
     cursor: pointer;
     margin-right: auto;
-    z-index: 1;
+    z-index: 2100;
     }
     
 
@@ -579,13 +721,13 @@ h5{
     visibility: visible;
     opacity: 1;
     display: block;
-    height: 35%;
+    height: 38%;
     padding:10px;
     line-height: 50px;
     position: absolute;
-    top:14%;
+    top: 17%;
     right:1.5%;
-    z-index: 1;
+    z-index: 999;
     border-bottom: 0.4px solid #000;
     transition: 0.3s ease-in-out;
     border-radius: 5px;
@@ -626,7 +768,8 @@ h5{
   color: #c69b26;
   text-align: center;
   position: relative;
-  top: 100px;
+  top: 10px;
+  bottom: 0;
 }
 
   h4:after{
@@ -645,7 +788,7 @@ h5{
   
   .why-choose-us{
     position: relative;
-    top: 150px;
+    top: 50px;
     flex-direction: column;
     justify-content: center;
   }
@@ -664,7 +807,7 @@ h5{
     align-items: center;
     gap: 20px;
     position: relative;
-    top: 150px;
+    top: 100px;
   }
 
   .products{
@@ -675,5 +818,40 @@ h5{
   .purchase{
     flex-direction: column;
   }
+
+  h4{
+    margin-bottom: 0;
+  }
+
+  .contact-box{
+    flex-direction: column;
+    position: relative;
+    top: 80px;
+  }
+
+  .contact-info i{
+    font-size: 20px;
+  }
+
+
+  .footer-content{
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+
+   .footer-content{
+    flex-direction: column;
+    gap:20px;
+    text-align: start;
+    justify-content: flex-start;
+  }
+
+  .links-contact{
+    flex-direction: column;
+    gap:20px;
+    position: static;
+  }
+
+
 
 }

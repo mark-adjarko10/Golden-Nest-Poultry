@@ -24,6 +24,7 @@ body{
 
 .website-logo img{
   max-width: 100px;
+  mix-blend-mode: multiply;
 }
 
 h1{
@@ -47,10 +48,11 @@ nav{
   padding: 20px;
   height: auto;
   width: auto;
-  box-shadow: 2px 2px 10px #000000;
+  box-shadow: 0px 0px 10px #c6c5c5;
   z-index: 2000;
   background: transparent;
-  
+  background-color: #fffefb;
+  border-radius: 50px;
 }
 
 nav ul{

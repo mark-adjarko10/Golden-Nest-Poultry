@@ -47,9 +47,10 @@ nav{
   padding: 20px;
   height: auto;
   width: auto;
-  box-shadow: 0px 0px 10px #adabab;
+  box-shadow: 2px 2px 10px #000000;
   z-index: 2000;
   background: transparent;
+  
 }
 
 nav ul{
@@ -685,7 +686,7 @@ flex-direction: column;
 
   .menu-bar ul li a{
     margin-top: 0;
-    color:#fff;
+    color:#2e7d32;
     font-size: 18px;
   }
   
@@ -701,7 +702,7 @@ flex-direction: column;
   }
 
   #side {
-  color: #fff;
+  color: #000000;
   background: #333;
     /* background: linear-gradient(to top, 
                                 #858685 25%,
@@ -732,9 +733,10 @@ flex-direction: column;
     top: 17%;
     right:1.5%;
     z-index: 999;
-    border-bottom: 0.4px solid #000;
     transition: 0.3s ease-in-out;
-    border-radius: 5px;
+    background: linear-gradient(to right, #fff);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #6b6767;
   }
 
   #sideC:not(:checked) ~ #side  {
